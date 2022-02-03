@@ -9,6 +9,8 @@ class Absence extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     protected $casts = [
         'absence_date' => 'date'
     ];

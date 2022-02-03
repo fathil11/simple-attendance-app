@@ -95,6 +95,6 @@ class EmployeeSeeder extends Seeder
             'join_date' => '2008-08-16',
         ]);
 
-        // Employee::factory(100)->create();
+        Employee::factory(100)->create();
     }
 }
