@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Absence extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'absence_date' => 'date'
+    ];
+
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class, 'employee_code', 'code');
+    }
 }
