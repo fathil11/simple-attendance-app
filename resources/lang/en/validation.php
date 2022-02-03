@@ -83,17 +83,17 @@ return [
         'array' => 'The :attribute must not have more than :value items.',
     ],
     'max' => [
-        'numeric' => 'The :attribute must not be greater than :max.',
+        'numeric' => ':attribute tidak boleh lebih dari :max.',
         'file' => 'The :attribute must not be greater than :max kilobytes.',
-        'string' => 'The :attribute must not be greater than :max characters.',
+        'string' => 'Isi dari :attribute tidak boleh lebih dari :max karakter.',
         'array' => 'The :attribute must not have more than :max items.',
     ],
     'mimes' => 'The :attribute must be a file of type: :values.',
     'mimetypes' => 'The :attribute must be a file of type: :values.',
     'min' => [
-        'numeric' => 'The :attribute must be at least :min.',
+        'numeric' => ':attribute harus lebih dari :min.',
         'file' => 'The :attribute must be at least :min kilobytes.',
-        'string' => 'The :attribute must be at least :min characters.',
+        'string' => 'Isi dari :attribute tidak boleh kurang dari :min karakter.',
         'array' => 'The :attribute must have at least :min items.',
     ],
     'multiple_of' => 'The :attribute must be a multiple of :value.',
@@ -107,7 +107,7 @@ return [
     'prohibited_unless' => 'The :attribute field is prohibited unless :other is in :values.',
     'prohibits' => 'The :attribute field prohibits :other from being present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => ':attribute tidak boleh kosong.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -157,6 +157,15 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'employee.code' => 'Nomor Induk',
+        'employee.name' => 'Nama',
+        'employee.address' => 'Alamat',
+        'employee.birth_date' => 'Tanggal Lahir',
+        'employee.join_date' => 'Tanggal Bergabung',
+        'absence.absence_date' => 'Tanggal Cuti',
+        'absence.duration' => 'Lama Cuti',
+        'absence.description' => 'Keterangan',
+    ],
 
 ];

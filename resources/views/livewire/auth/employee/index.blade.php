@@ -54,7 +54,7 @@
                                         <x-sort-direction-icon sortField="join_date" :sortBy="$sortBy" :sortAsc="$sortAsc"/>
                                     </th>
                                     <th scope="col"
-                                        class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                        class="py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400">
                                         Aksi
                                     </th>
                                 </tr>
@@ -81,7 +81,10 @@
                                         class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         {{ $employee->join_date->isoFormat('D MMMM Y') }}</td>
                                     <td
-                                        class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
+                                        <button wire:click="showCreateAbsenceModal({{ $employee->id }})" class="text-green-400 font-thin hover:bg-green-400 hover:text-white p-1 rounded">
+                                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>
+                                        </button>
                                         <button wire:click="showEmployeeEditModal({{ $employee->id }})" class="text-yellow-400 font-thin hover:bg-yellow-400 hover:text-white p-1 rounded">
                                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path></svg>
                                         </button>
@@ -104,6 +107,7 @@
             {{ $employees->links() }}
         </div>
 
+        <livewire:auth.employee.absence.create/>
         <livewire:auth.employee.create/>
         <livewire:auth.employee.edit/>
         <livewire:auth.employee.delete/>

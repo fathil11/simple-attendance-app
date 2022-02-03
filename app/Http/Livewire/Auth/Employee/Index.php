@@ -48,6 +48,11 @@ class Index extends Component
         $this->emit('showEmployeeCreateModal');
     }
 
+    public function showCreateAbsenceModal($id)
+    {
+        $this->emit('showAbsenceCreateModal', $id);
+    }
+
     public function showEmployeeEditModal($id)
     {
         $this->emit('showEmployeeEditModal', $id);
