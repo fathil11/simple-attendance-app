@@ -10,6 +10,7 @@ class Create extends Component
     protected $listeners = ['showEmployeeCreateModal'];
 
     public $showCreateEmployeeModal = false;
+
     public $employee;
 
     protected $rules = [
@@ -44,6 +45,6 @@ class Create extends Component
 
         $this->reset(['employee']);
         $this->showCreateEmployeeModal = false;
-
+        $this->emitUp('refreshEmployee');
     }
 }

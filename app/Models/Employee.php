@@ -12,8 +12,8 @@ class Employee extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'birth_date' => 'date',
-        'join_date' => 'date'
+        'birth_date' => 'date:Y-m-d',
+        'join_date' => 'date:Y-m-d'
     ];
 
     public function absences()
