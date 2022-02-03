@@ -20,4 +20,9 @@ class Employee extends Model
     {
         return $this->hasMany(Absence::class, 'employee_code', 'code');
     }
+
+    public function lastAbsence()
+    {
+        return $this->hasOne(Absence::class, 'employee_code', 'code')->latest();
+    }
 }

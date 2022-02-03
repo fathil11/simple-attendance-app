@@ -25,8 +25,21 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
 
     // Employee
     Route::get('/karyawan', function(){
-        return view('auth.employee');
+        return view('auth.employee.index');
     })->name('employee.index');
+
+    // Statistic
+    Route::get('/karyawan/statistik/pernah-cuti', function(){
+        return view('auth.statistic.has-absence');
+    })->name('employee.statistic.has-absence');
+
+    Route::get('/karyawan/statistik/cuti-lebih-dari-sekali', function(){
+        return view('auth.statistic.has-absence-more-than-one');
+    })->name('employee.statistic.has-absence-more-than-one');
+
+    Route::get('/karyawan/statistik/sisa-cuti', function(){
+        return view('auth.statistic.absence-leftover');
+    })->name('employee.statistic.absence-leftover');
 
 });
 

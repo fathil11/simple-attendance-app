@@ -1,5 +1,5 @@
-<div class="mx-auto w-100 sm:px-6 lg:px-8">
-    <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div class="mx-auto w-100 sm:px-6 lg:px-8 py-10">
+    <div class="px-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div class="flex flex-col mt-3">
             <div class="flex py-4 justify-between">
                 <div>
@@ -16,9 +16,6 @@
                     <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
                     Tambah Karyawan
                   </button>
-
-
-                {{-- <x-jet-button wire:click="showEmployeeCreateModal()">Tambah Karyawan</x-jet-button> --}}
             </div>
             <div class="overflow-x-auto shadow-md sm:rounded-lg">
                 <div class="inline-block min-w-full align-middle">
@@ -103,7 +100,7 @@
             </div>
         </div>
 
-        <div class="mt-6">
+        <div class="my-6">
             {{ $employees->links() }}
         </div>
 
