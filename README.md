@@ -1,57 +1,49 @@
-# McEasy HRS
+# Simple Attendance App
+A simple employee attendance & paid leave management system.
 
-Sistem manajemen karyawan dan cuti karyawan untuk tes McEasy.
-
-## Instalasi
-
-1. Install package menggunakan composer pada terminal.
+## Installation
+1. Intall the required PHP packages.
 
 ```bash
 composer install
 ```
 
-2. Copy .env.example menjadi .env
+2. Copy .env.example to .env
 
 ```bash
-mv .env.example .env
+cp .env.example .env
 ```
 
-3. Isi credential database pada file .env
-4. Buat Laravel App Key.
+3. Fill the config like db, etc inside the .env file
 
+4. Create the Laravel App Key.
 ```bash
 php artisan key:generate
 ```
 
-5. Install package npm dan build package pada terminal.
-
+5. Install the node modules and build.
 ```bash
 npm install
 npm run dev
 ```
 
-6. Lakukan migrasi database dan jalankan database seeder.
-
+6. Migrate & seed the database.
 ```bash
 php artisan migrate:fresh --seed
 ```
 
-7. Jalankan artisan server.
+7. Run the artisan serve command.
 
 ```bash
 php artisan serve
 ```
 
-8. Akses sistem di url [http://localhost:8000](http://localhost:8000)
-
-## User Untuk Login
+## Default Login Credential
 
 Email : `admin@admin.com`
-
 Password : `123123123`
 
 ## Tech Stacks
-
 -   [Laravel 8](https://laravel.com/docs/8.x)
 -   [Livewire 2](https://laravel-livewire.com)
 -   [Jetstream](https://jetstream.laravel.com/2.x/introduction.html)
@@ -60,5 +52,4 @@ Password : `123123123`
 -   [Flowbite Components](https://flowbite.com/docs/getting-started/introduction)
 
 ## License
-
 [MIT](https://choosealicense.com/licenses/mit/)
