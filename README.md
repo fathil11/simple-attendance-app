@@ -1,4 +1,4 @@
-# Simple Attendance App
+# Attendance App
 A simple employee attendance & paid leave management system.
 
 ## Installation
